@@ -32,8 +32,6 @@ public class Demo {
 		System.out.println(
 				"***********************************************************************************************");
 
-		
-
 		System.out.println("Enter the URL :  ");
 		String url = input.nextLine();
 
@@ -50,8 +48,6 @@ public class Demo {
 			throw new Exception("url not undertood");
 
 		}
-		
-		
 
 		System.out.println("The browser chosen is " + browser + " and URL is " + baseurl);
 
@@ -63,12 +59,12 @@ public class Demo {
 
 		} else if (browservalue.equalsIgnoreCase("firefox")) {
 
+			System.setProperty("webdriver.gecko.driver", "C:\\Selenium\\Drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 
 		}
-		
-		System.out.println(
-				"***********************************************************************************************");
+
+		System.out.println("***********************************************************************************************");
 
 		driver.manage().window().maximize();
 		driver.get(baseurl);
