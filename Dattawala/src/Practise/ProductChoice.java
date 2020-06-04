@@ -18,8 +18,8 @@ public class ProductChoice {
 		try {
 			choice = input.nextInt();
 		} catch (Exception e) {
-			System.out.println("Thats an invalid choice. Please choose numbers only");
-			throw new Exception(e);
+			System.out.println("Thats an invalid choice. Please choose numbers only"); 
+			throw new Exception(e); 
 		}
 
 		switch (choice) {
@@ -95,7 +95,7 @@ public class ProductChoice {
 				television = input.nextInt();
 			} catch (Exception e) {
 				System.out.println("Thats an invalid choice");
-				throw new Exception(e);
+				//throw new Exception(e);
 			}
 
 			switch (television) {
