@@ -35,7 +35,16 @@ public class ThreeAndFive {
 					System.out.print(" "+k);
 				}
 			}
+			System.out.println();
 			
+			System.out.println("Numbers having both digit same are: ");
+			for(int l=1;l<=100;l++) {
+				
+				if(l%11==0 ) {
+					
+					System.out.print(" "+l);
+				}
+			}
 	}}
 
 	
