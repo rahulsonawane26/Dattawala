@@ -49,7 +49,8 @@ public class Calculator {
 			switch (choice1) {
 
 			case 1:
-				System.out.println(a + b);
+				CalusingMethods calci = new CalusingMethods();
+				System.out.println("Addition is: "+calci.addition(a, b));
 				break;
 			case 2:
 				System.out.println(a - b);
