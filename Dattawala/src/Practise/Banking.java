@@ -59,7 +59,7 @@ public class Banking {
 			break;
 
 		case 3:
-			System.out.println("Enter the Amount you want to withdraw");
+			System.out.println("Enter the Amount you want to Deposit");
 			int deposit = input.nextInt();
 			deposit(deposit);
 			System.out.println("The amount in your account is: " + balance());
