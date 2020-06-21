@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Bank {
 
 	static int atm = 1234;
-	static int balance = 30000;
+	static long balance = 30000;
 	static int pin = 0;
 
 	public static void main(String[] args) {
@@ -22,8 +22,7 @@ public class Bank {
 				System.out.println(
 						"Your ATM pin is correct." + "\n" + "-----------------------------------------------------");
 				i = 0;
-				
-				
+
 				System.out.println("Enter your choice-------" + "\n" + "1> BALANCE-" + "\n" + "2> WITHDRAW" + "\n"
 						+ "3> DEPOSIT" + "\n");
 
@@ -39,7 +38,7 @@ public class Bank {
 					System.out.println(
 							"You have chosen to WITHDRAW." + "\n" + " How much Amount would you like to witdraw");
 
-					int wAmount = input.nextInt();
+					long wAmount = input.nextInt();
 					if (wAmount <= balance) {
 						balance = balance - wAmount;
 						System.out.println(
@@ -53,7 +52,7 @@ public class Bank {
 					System.out.println(
 							"You have chosen to DEPOSIT." + "\n" + " How much Amount would you like to deposit");
 
-					int dAmount = input.nextInt();
+					long dAmount = input.nextInt();
 					balance = dAmount + balance;
 					System.out.println(
 							"You have deposited $" + dAmount + "\n" + "The current balance now is $" + balance);
@@ -61,7 +60,6 @@ public class Bank {
 
 				default:
 					System.out.println("That is an incorrect choice");
-					
 
 				}
 			} else {
