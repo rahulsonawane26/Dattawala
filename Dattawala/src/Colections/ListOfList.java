@@ -3,22 +3,20 @@ package Colections;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.collect.Lists;
+
 public class ListOfList {
 
 	public static void main(String[] args) {
 		
 		System.out.println(allFriends());
-		
 		System.out.println(allFriends().size());
-		
-		System.out.println(allFriends().get(2));
-		System.out.println(allFriends().get(1).length());
 
 	}
 
-	static public List<String> cbdFriends() {
+	static public ArrayList<String> cbdFriends() {
 
-		List<String> cbd = new ArrayList<>();
+		ArrayList<String> cbd = new ArrayList<>();
 		cbd.add("Butla");
 		cbd.add("Sukhi");
 		cbd.add("Amit");
@@ -28,8 +26,9 @@ public class ListOfList {
 
 	}
 
-	static public List<String> collegeFriends() {
-		List<String> college = new ArrayList<>();
+	static public ArrayList<String> collegeFriends() {
+		
+		ArrayList<String> college = new ArrayList<>();
 		college.add("Datta");
 		college.add("Sachin");
 		college.add("Sunil");
@@ -41,9 +40,9 @@ public class ListOfList {
 
 	}
 
-	static public List<String> officeFriends() {
+	static public ArrayList<String> officeFriends() {
 
-		List<String> office = new ArrayList<>();
+		ArrayList<String> office = new ArrayList<>();
 		office.add("Bobby");
 		office.add("Ashish");
 		office.add("Kautubh");
@@ -52,9 +51,9 @@ public class ListOfList {
 		return office;
 	}
 
-	static public List<String> cousinFriends() {
+	static public ArrayList<String> cousinFriends() {
 
-		List<String> cousin = new ArrayList<>();
+		ArrayList<String> cousin = new ArrayList<>();
 		cousin.add("Ashu");
 		cousin.add("Pratik");
 		cousin.add("Satej");
@@ -62,13 +61,16 @@ public class ListOfList {
 		return cousin;
 	}
 
-	static List<String> allFriends() {
 
-			List<String> friends = new ArrayList<>();
-			friends.addAll(cousinFriends());
-			friends.addAll(officeFriends());
-			friends.addAll(collegeFriends());
-			friends.addAll(cbdFriends());
-			return friends;
+	static List<ArrayList<String>> allFriends() {
+		
+		List<ArrayList<String>> allfriends = new ArrayList<ArrayList<String>>();
+		allfriends.add(cousinFriends());
+		allfriends.add(officeFriends());
+		allfriends.add(cbdFriends());
+		allfriends.add(collegeFriends());
+		
+		return allfriends;
+		
 		}
 }
